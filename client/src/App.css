@@ -1,0 +1,82 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}/* client/src/App.css (CRITICAL FIX FOR MONACO) */
+
+/* ... (Keep all existing default Vite styles here) ... */
+
+/* DAY 10: REMOTE CURSOR STYLING */
+
+
+/* GENERAL LINE RULE: Forces the line background to be visible */
+/* client/src/App.css (CRITICAL FINAL FIX FOR THE LABEL) */
+
+/* Targets the element that holds the line (vertical bar) */
+.remote-cursor-line[class*="remote-cursor-line-"] {
+  border-left: 2px solid; /* Color comes from JS injection */
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Targets the decoration head: This must be set to ensure it has space */
+.remote-cursor-head {
+    /* Monaco Editor renders this box. We apply a class to its pseudo-element. */
+    position: relative; 
+}
+
+/*  Targets the pseudo-element that displays the username label */
+[class*="remote-cursor-label-"]:after {
+    /* These styles must be forced with !important to overcome Monaco's default styling */
+    content: attr(data-label); /* NOTE: We need to use attr() if content isn't set dynamically */
+    
+    position: absolute !important;
+    white-space: nowrap !important; /* Keep the username on one line */
+    
+    /* POSITIONING & APPEARANCE */
+    top: -20px !important; 
+    left: 0 !important;
+    padding: 2px 4px !important;
+    color: white !important; 
+    font-size: 10px !important;
+    border-radius: 3px !important;
+    z-index: 100 !important;
+    
+    /* The background-color is handled by your injected <style> tag in Js */
+}
