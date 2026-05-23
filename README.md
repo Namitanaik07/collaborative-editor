@@ -1,3 +1,4 @@
+
 ```markdown
 # SyncCode Collaborative 🚀
 
@@ -57,23 +58,24 @@ Follow these steps to spin up the project on your local machine.
 git clone [https://github.com/Namitanaik07/collaborative-editor.git](https://github.com/Namitanaik07/collaborative-editor.git)
 cd collaborative-editor
 
-
+```
 ### 2. Backend Setup
 ```bash
 cd server
 npm install
 
-
+```
 Create a .env file inside the server/ directory and add your variables:
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 
-
+```
 Start the backend server:
 ```bash
 npm start
 
+```
 ### 3. Frontend Setup
 Open a new terminal window, navigate back to the root, then go to the client folder:
 ```bash
@@ -81,7 +83,7 @@ cd client
 npm install
 npm run dev
 
-
+```
 Open http://localhost:5173 in your browser.
 ## 🤝 Contribution Guidelines
 We love your Pull Requests! To maintain code quality:
