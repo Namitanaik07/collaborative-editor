@@ -53,6 +53,7 @@ Follow these steps to spin up the project on your local machine.
 - Node.js installed (v18+)
 - A MongoDB Atlas Cluster URL
 
+```
 ### 1. Clone the Repository
 ```bash
 git clone [https://github.com/Namitanaik07/collaborative-editor.git](https://github.com/Namitanaik07/collaborative-editor.git)
